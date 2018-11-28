@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <DeploymentModel>Project</DeploymentModel>
-  <ProductVersion>15.0.900.40</ProductVersion>
+  <ProductVersion>14.0.3002.113</ProductVersion>
   <SchemaVersion>9.0.1.0</SchemaVersion>
   <State>$base64$PFNvdXJjZUNvbnRyb2xJbmZvIHhtbG5zOnhzZD0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEiIHhtbG5zOnhzaT0iaHR0cDovL3d3dy53My5vcmcvMjAwMS9YTUxTY2hlbWEtaW5zdGFuY2UiIHhtbG5zOmRkbDI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yIiB4bWxuczpkZGwyXzI9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDAzL2VuZ2luZS8yLzIiIHhtbG5zOmRkbDEwMF8xMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDA4L2VuZ2luZS8xMDAvMTAwIiB4bWxuczpkZGwyMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAiIHhtbG5zOmRkbDIwMF8yMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEwL2VuZ2luZS8yMDAvMjAwIiB4bWxuczpkZGwzMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAiIHhtbG5zOmRkbDMwMF8zMDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDExL2VuZ2luZS8zMDAvMzAwIiB4bWxuczpkZGw0MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAiIHhtbG5zOmRkbDQwMF80MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEyL2VuZ2luZS80MDAvNDAwIiB4bWxuczpkZGw1MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAiIHhtbG5zOmRkbDUwMF81MDA9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vYW5hbHlzaXNzZXJ2aWNlcy8yMDEzL2VuZ2luZS81MDAvNTAwIiB4bWxuczpkd2Q9Imh0dHA6Ly9zY2hlbWFzLm1pY3Jvc29mdC5jb20vRGF0YVdhcmVob3VzZS9EZXNpZ25lci8xLjAiPg0KICA8RW5hYmxlZD5mYWxzZTwvRW5hYmxlZD4NCiAgPFByb2plY3ROYW1lPjwvUHJvamVjdE5hbWU+DQogIDxBdXhQYXRoPjwvQXV4UGF0aD4NCiAgPExvY2FsUGF0aD48L0xvY2FsUGF0aD4NCiAgPFByb3ZpZGVyPjwvUHJvdmlkZXI+DQo8L1NvdXJjZUNvbnRyb2xJbmZvPg==</State>
   <Database>
@@ -15,7 +15,7 @@
       <SSIS:Project SSIS:ProtectionLevel="EncryptSensitiveWithUserKey" xmlns:SSIS="www.microsoft.com/SqlServer/SSIS">
         <SSIS:Properties>
           <SSIS:Property SSIS:Name="ID">{a52d15ca-4589-4737-9316-ad785dba4f86}</SSIS:Property>
-          <SSIS:Property SSIS:Name="Name">egrat-smartclosing</SSIS:Property>
+          <SSIS:Property SSIS:Name="Name">egrat-smartclosing-ETL</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
           <SSIS:Property SSIS:Name="VersionBuild">0</SSIS:Property>
@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-R3KU538</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAACAAAAAAAQZgAAAAEAACAAAABE48prqpSO+d6iwj+j1rtDGXKjJ5ymayy5MTPRUyEOeQAAAAAOgAAAAAIAACAAAAAIXLHRIvHET+An3yIy9OAEhw8dn1yOd+iMJlKrxcG0ZZAAAADn2JpNsJ4aVyBGFaPSsrXyO219pZsuRYeSNbafx/QLr7C5kJgSyy9gQZWV53HjD/FGsIu835hyK56Z5bQEo7nRB9++2je29lfblbdoA39H/afyieJ0PQsPfrwnQ+TfaPSljwBrCtkyF5nfzMpyOqBM4ToEL/iTRQNjq9jcjP/Kd3LvdInTR5j8smiTC4fkwVFAAAAADAluYumvqubWa8utLzSmMSCMuuk1UJmqb226DAbIsu2TNnmpl99g2WPOuW2n6ZNgYT6+RJx8R+XpB7Mivy8/lg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAsaGLgmdioEqb/cEIgDQQPQAAAAACAAAAAAAQZgAAAAEAACAAAAAQWskR5sqsRdFZHZHw7sftQRtBMjA0pX6BHqK5Pg+aRwAAAAAOgAAAAAIAACAAAAABkJxtkR+x8xiHXUfXP2tKzQ5/ywPEuYK1ufiWKuWSW5AAAABeNkzhlXmmwZF9eVo3hzlZNtIFeBaTUgxFlXhcJ4OU+lkDl546h3sc58lK5ZE/UduFH3QupxHT4K/qX+BOzkWMZpgEelwMZwuTeD6oIHRfz0Sw2izJtboabmqSV7PnRl6CEvoFf6eYsJijMue4fePefFbxZf1xZlPJ6eWRi2Acq+MB4RM7iT58vyL1vQw3xA9AAAAAdq/+Y8ohKWG+Tu12WycnT1nKOAv5PlQAvZ3HxrIPjmT7sl6vugz531E0ABumJ+kbuCxvOylat+ILZhjpDlEIRQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>

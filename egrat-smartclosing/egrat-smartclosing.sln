@@ -3,15 +3,36 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "egrat-smartclosing", "egrat-smartclosing\egrat-smartclosing.dtproj", "{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}"
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "egrat-smartclosing-ETL", "egrat-smartclosing\egrat-smartclosing-ETL.dtproj", "{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}"
+EndProject
+Project("{F14B399A-7131-4C87-9E4B-1186C45EF12D}") = "egrat-SmartClosing-reports", "SmartClosing\egrat-SmartClosing-reports.rptproj", "{C8BE401B-9BC0-465B-80A7-669AFC816CCD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Default = Debug|Default
+		DebugLocal|Default = DebugLocal|Default
 		Development|Default = Development|Default
+		Release|Default = Release|Default
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.Debug|Default.ActiveCfg = Development
+		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.Debug|Default.Build.0 = Development
+		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.DebugLocal|Default.ActiveCfg = Development
+		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.DebugLocal|Default.Build.0 = Development
 		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.Development|Default.ActiveCfg = Development
 		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.Development|Default.Build.0 = Development
+		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.Release|Default.ActiveCfg = Development
+		{C5EEFEC0-6D9A-482D-BD16-4C2BE92AE756}.Release|Default.Build.0 = Development
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Debug|Default.ActiveCfg = Debug
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Debug|Default.Build.0 = Debug
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Debug|Default.Deploy.0 = Debug
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.DebugLocal|Default.ActiveCfg = DebugLocal
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.DebugLocal|Default.Build.0 = DebugLocal
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Development|Default.ActiveCfg = DebugLocal
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Development|Default.Build.0 = DebugLocal
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Release|Default.ActiveCfg = Release
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Release|Default.Build.0 = Release
+		{C8BE401B-9BC0-465B-80A7-669AFC816CCD}.Release|Default.Deploy.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
