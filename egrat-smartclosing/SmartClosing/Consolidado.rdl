@@ -97,7 +97,7 @@ ON ledger.credit = accounts.id</CommandText>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Consolidado</Value>
+                    <Value>Consolidated</Value>
                     <Style>
                       <FontFamily>Segoe UI Light</FontFamily>
                       <FontSize>24pt</FontSize>
