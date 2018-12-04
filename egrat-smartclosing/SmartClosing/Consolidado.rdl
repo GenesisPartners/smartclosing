@@ -303,7 +303,7 @@ ON ledger.credit = accounts.id</CommandText>
         <Height>2.46208in</Height>
         <Style />
       </Body>
-      <Width>10.75in</Width>
+      <Width>8.76042in</Width>
       <Page>
         <LeftMargin>1in</LeftMargin>
         <RightMargin>1in</RightMargin>
