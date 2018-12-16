@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">DESKTOP-R3KU538</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAACAAAAAAAQZgAAAAEAACAAAABVi/MJMroueV96fR9k3/ZfCMKMs9lrV6kKshwuXO/NRQAAAAAOgAAAAAIAACAAAACNz3nuJl2+i5vpW2Qn/jJS6/lHqDkZ3xp6ugwummWxOpAAAABGOWe3ZRhGa38NZn2MWqfQGLb8pbStnaZFhp2Q6NAEsbbAFqCYM/xYrPnjtH1rJSZ1WUpV3pnW/pG73ZFYi9ANz3QfvuXR6LBntruKdanh+JsR3KrP2iavEFBwi0PXfEAgXc6phZskEHGM5TsUHcodVLKjsxs486OIhEDKBTSiulg7K3FZTmKh1He/3bnFXedAAAAAFa0hGtxhr9ZFDx811HhDk/OtFhz5xf47q8/FjZDNTbacpz26QdnfzkO5cDyjYevKdztY/fbPNgbzfJtDzCvWKw==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAACAAAAAAAQZgAAAAEAACAAAAAiuW1Luam2mKCcwyBJ1rmrn3B34NXL1B2k4lneqMuR7gAAAAAOgAAAAAIAACAAAABgilDJKkVLxGRtJcqY9dSBkcSsCqz+CgIl2nhLALr/ppAAAAAZSsqEsHU4JBPWBE7PFHi2zbX5i6CAgF4JE4DOkodo3N8E9MzEGx2hEjnVbFPWvsL1ArwniohsfnJNm7OqFs6DJCI/I5OaLjWYgAlR3zcQ0hso8psOZn5dI+VxKwLgM4CMcnbknxFhTVh7GLRWfHvAwlWGr6dK0tse5StUz/QQRugWZ1mbWY4rn33BbSK3VsRAAAAAPJF9q2m9vRPYPevw5pHQpbkbeDwrHSt/8py5oF8wemqNAwDeTmgW88t+M2oDindHPludsXmP0x/VVhUlL2iqvQ==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -42,10 +42,10 @@
                 <SSIS:Property SSIS:Name="Name">HotmartETL</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">11</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">21</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{668DD67C-BEAF-4E99-AE05-EB0E369417D0}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{F3D1D802-30FE-446B-A1B2-B25EFAAFE901}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -141,7 +141,22 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.AlwaysCheckForRowDelimiters">
+                <SSIS:Parameter SSIS:Name="CM.Profile.ConnectionString">
+                  <SSIS:Properties>
+                    <SSIS:Property SSIS:Name="ID">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="CreationName">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="Description">
+                    </SSIS:Property>
+                    <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\victo\Desktop\Profile</SSIS:Property>
+                    <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
+                  </SSIS:Properties>
+                </SSIS:Parameter>
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.AlwaysCheckForRowDelimiters">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -156,7 +171,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.CodePage">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.CodePage">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -167,11 +182,11 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">65001</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">1252</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.ColumnNamesInFirstDataRow">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.ColumnNamesInFirstDataRow">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -186,7 +201,7 @@
                     <SSIS:Property SSIS:Name="DataType">3</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.ConnectionString">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.ConnectionString">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -201,7 +216,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.DataRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.DataRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -216,7 +231,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.Format">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.Format">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -231,7 +246,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.HeaderRowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.HeaderRowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -247,7 +262,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.HeaderRowsToSkip">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.HeaderRowsToSkip">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -262,7 +277,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.LocaleID">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.LocaleID">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -277,7 +292,7 @@
                     <SSIS:Property SSIS:Name="DataType">9</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.RowDelimiter">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.RowDelimiter">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -293,7 +308,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.TextQualifier">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.TextQualifier">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
@@ -308,7 +323,7 @@
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
-                <SSIS:Parameter SSIS:Name="CM.sales_history.Unicode">
+                <SSIS:Parameter SSIS:Name="CM.sales_history_raw.Unicode">
                   <SSIS:Properties>
                     <SSIS:Property SSIS:Name="ID">
                     </SSIS:Property>
