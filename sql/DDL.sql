@@ -1,5 +1,5 @@
 CREATE TABLE [sales_history_raw] (
-    [Nome do Produto] varchar(250),
+    [Nome do Produto] varchar(255),
     [Nome do Produtor] varchar(255),
     [Documento do Produtor] varchar(255),
     [Nome do Afiliado] varchar(255),
