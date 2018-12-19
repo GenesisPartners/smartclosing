@@ -11,8 +11,8 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="HotmartETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="21"
-  DTS:VersionGUID="{F3D1D802-30FE-446B-A1B2-B25EFAAFE901}">
+  DTS:VersionBuild="22"
+  DTS:VersionGUID="{6F9364E3-8464-492F-98E0-22730808A706}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -27,7 +27,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACoKCaxz6lzU1O5BYc4d3Bgm4orMQyffDG9xHk035+LHgAAAAAOgAAAAAIAACAAAAB8HgGXaqfaAJvL7TCJCFnHe8j2VOvXN6h7J902vyuIGCAAAADdBRJcJ/K34df5eHH9l9ci9jUaeZWiu9zbxoIcnXBnRUAAAACQedZwASSBtFEKcUhO6+gTUZ0PlclQFLHPJ8GgSSr5Mbnm+NJjLgQG4mHqUsWIDolf0ghD3WRKXaywmJSKO8cP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmVQft2RCuZskHYZ0PaCJf5VFH9Y/fc82LJMuMlNIZNAAAAAAOgAAAAAIAACAAAAAyXu6CSu+7BsBHyUQ/VP1QXdp6iIPKtcNzFvZUnO+OPiAAAACQotijEDN9V8H8lKP4AMihrk/zTBM92pTtQTWWLrBsIkAAAAA92QbtxowbTuw312C5J//qT7PKXAmXbLoJkCEjLCKOvfdWxp6MAs/E9W+vUC1uiUI1bRx+BPBL6WFNNAOexpex</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -2706,7 +2706,57 @@
         </pipeline>
       </DTS:ObjectData>
     </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\sales_history_prepare"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{3EBA7096-B90D-4C24-A843-24E9E94DE1A2}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="sales_history_prepare"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C119E209-1BA6-4DE1-97C8-F3D2C14A4C92}"
+          SQLTask:SqlStatementSource="TRUNCATE TABLE sales_history" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\sales_history_transform"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{AE45082C-360A-4702-AF4A-01DB1316DEE5}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="sales_history_transform"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{C119E209-1BA6-4DE1-97C8-F3D2C14A4C92}"
+          SQLTask:SqlStatementSource="SELECT [Nome do Produto] nome_produto&#xA;      ,[Nome do Produtor] nome_produtor&#xA;      ,[MoedaProduto] moeda_produto&#xA;      ,CAST([Preço do Produto] AS FLOAT) preco_produto&#xA;      ,[MoedaOferta] moeda_oferta&#xA;      ,CAST([Preço da Oferta] AS FLOAT) preco_oferta&#xA;      ,CAST([Taxa de Câmbio] AS FLOAT) taxa_cambio&#xA;      ,[MoedaOriginal] moeda_original&#xA;      ,CAST([Preço Original] AS FLOAT) preco_original&#xA;      ,CAST([Número da Parcela] AS INT) numero_parcela&#xA;      ,CAST([Recorrência] AS INT) recorrencia&#xA;      ,CONVERT(datetime, [Data de Venda], 103) data_venda&#xA;      ,CONVERT(datetime, [Data de Confirmação], 103) data_confirmacao&#xA;      ,[Status] status&#xA;      ,[chave] chave&#xA;      ,[Código do Produto] cod_produto&#xA;      ,[Código da Afiliação] cod_afiliacao&#xA;      ,[Código de Oferta] cod_oferta&#xA;      ,[Origem de Checkout] origem_checkout&#xA;      ,[Tipo de Pagamento] tipo_pagamento&#xA;      ,[Período Grátis] periodo_gratis&#xA;      ,[Tem co-produção] tem_co_producao&#xA;      ,[Origem da Comissão] origem_comissao&#xA;      ,CAST([Preço Total] as float) preco_total&#xA;      ,[Tipo pagamento oferta] tipo_pagto_oferta&#xA;      ,[Taxa de Câmbio Real] taxa_cambio_real&#xA;      ,CAST([Preço Total Convertido] as float) preco_total_convertido&#xA;      ,CAST([Quantidade de itens] as int) quant_itens&#xA;  INTO sales_history&#xA;  FROM [dbo].[sales_history_raw]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
   </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{5A60BD6C-4506-429D-9507-F3325E5A0BA6}"
+      DTS:From="Package\sales_history_load"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\sales_history_prepare" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{C82CB023-32D3-48DD-8853-554EDC872BBC}"
+      DTS:From="Package\sales_history_prepare"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\sales_history_transform" />
+  </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
 <!--If you manually edit this section and make a mistake, you can delete it. -->
@@ -2718,11 +2768,63 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="165,42"
           Id="Package\sales_history_load"
-          TopLeft="11,56" />
+          TopLeft="80,73" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\sales_history_transform"
+          TopLeft="72,253" />
+        <NodeLayout
+          Size="182,42"
+          Id="Package\sales_history_prepare"
+          TopLeft="71,161" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="162.25,115">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46"
+              Start="0,0"
+              End="0,38.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,38.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="164.75,203">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,50"
+              Start="0,0"
+              End="0,42.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,42.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </Package>
