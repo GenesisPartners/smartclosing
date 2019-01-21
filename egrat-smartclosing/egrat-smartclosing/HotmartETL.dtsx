@@ -11,11 +11,21 @@
   DTS:LocaleID="1046"
   DTS:ObjectName="HotmartETL"
   DTS:PackageType="5"
-  DTS:VersionBuild="22"
-  DTS:VersionGUID="{6F9364E3-8464-492F-98E0-22730808A706}">
+  DTS:VersionBuild="24"
+  DTS:VersionGUID="{B78F1AA5-29D9-4EDB-95D7-52EF0D52ABF5}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.egrat]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{A0A51206-801E-4F7B-953E-97C22C79BF3B}"
+      DTS:ObjectName="(localdb)\MSSQLLocalDB.egrat">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=egrat;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[egratitude.database.windows.net.egratitude.egratitude-admin]"
       DTS:CreationName="OLEDB"
@@ -27,7 +37,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABmVQft2RCuZskHYZ0PaCJf5VFH9Y/fc82LJMuMlNIZNAAAAAAOgAAAAAIAACAAAAAyXu6CSu+7BsBHyUQ/VP1QXdp6iIPKtcNzFvZUnO+OPiAAAACQotijEDN9V8H8lKP4AMihrk/zTBM92pTtQTWWLrBsIkAAAAA92QbtxowbTuw312C5J//qT7PKXAmXbLoJkCEjLCKOvfdWxp6MAs/E9W+vUC1uiUI1bRx+BPBL6WFNNAOexpex</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAvcU7qgUwOkelx7w5RMz7qgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB+iXfY/s6kGsYyFA1gKHxTmrbZoUTUi/h0091K8XE1EwAAAAAOgAAAAAIAACAAAAC+RGKgbHSvI3+38jJzWyIuRgMk4f9vLro0TbdW0fAF9SAAAADiLKqvbxV2uJInwJOAKUpn+pCupBGm2lKHc7c/WH4nYkAAAACTKv6fGLSrYcg30zXzPnfLwzHoO9Lmt8R70zu6C9JotfdHC9rWEOiWfoYgs5rPygbYmGraeFzWhuYWqjwX5K0j</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -570,8 +580,8 @@
               <connections>
                 <connection
                   refId="Package\sales_history_load\sales_history_db.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[egratitude.database.windows.net.egratitude.egratitude-admin]"
-                  connectionManagerRefId="Package.ConnectionManagers[egratitude.database.windows.net.egratitude.egratitude-admin]"
+                  connectionManagerID="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.egrat]"
+                  connectionManagerRefId="Package.ConnectionManagers[(localdb)\MSSQLLocalDB.egrat]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -974,7 +984,7 @@
                       refId="Package\sales_history_load\sales_history_db.Inputs[OLE DB Destination Input].ExternalColumns[Nome do Produto]"
                       codePage="1252"
                       dataType="str"
-                      length="250"
+                      length="255"
                       name="Nome do Produto" />
                     <externalMetadataColumn
                       refId="Package\sales_history_load\sales_history_db.Inputs[OLE DB Destination Input].ExternalColumns[Nome do Produtor]"
@@ -2734,7 +2744,7 @@
       <DTS:Variables />
       <DTS:ObjectData>
         <SQLTask:SqlTaskData
-          SQLTask:Connection="{C119E209-1BA6-4DE1-97C8-F3D2C14A4C92}"
+          SQLTask:Connection="{A0A51206-801E-4F7B-953E-97C22C79BF3B}"
           SQLTask:SqlStatementSource="SELECT [Nome do Produto] nome_produto&#xA;      ,[Nome do Produtor] nome_produtor&#xA;      ,[MoedaProduto] moeda_produto&#xA;      ,CAST([Preço do Produto] AS FLOAT) preco_produto&#xA;      ,[MoedaOferta] moeda_oferta&#xA;      ,CAST([Preço da Oferta] AS FLOAT) preco_oferta&#xA;      ,CAST([Taxa de Câmbio] AS FLOAT) taxa_cambio&#xA;      ,[MoedaOriginal] moeda_original&#xA;      ,CAST([Preço Original] AS FLOAT) preco_original&#xA;      ,CAST([Número da Parcela] AS INT) numero_parcela&#xA;      ,CAST([Recorrência] AS INT) recorrencia&#xA;      ,CONVERT(datetime, [Data de Venda], 103) data_venda&#xA;      ,CONVERT(datetime, [Data de Confirmação], 103) data_confirmacao&#xA;      ,[Status] status&#xA;      ,[chave] chave&#xA;      ,[Código do Produto] cod_produto&#xA;      ,[Código da Afiliação] cod_afiliacao&#xA;      ,[Código de Oferta] cod_oferta&#xA;      ,[Origem de Checkout] origem_checkout&#xA;      ,[Tipo de Pagamento] tipo_pagamento&#xA;      ,[Período Grátis] periodo_gratis&#xA;      ,[Tem co-produção] tem_co_producao&#xA;      ,[Origem da Comissão] origem_comissao&#xA;      ,CAST([Preço Total] as float) preco_total&#xA;      ,[Tipo pagamento oferta] tipo_pagto_oferta&#xA;      ,[Taxa de Câmbio Real] taxa_cambio_real&#xA;      ,CAST([Preço Total Convertido] as float) preco_total_convertido&#xA;      ,CAST([Quantidade de itens] as int) quant_itens&#xA;  INTO sales_history&#xA;  FROM [dbo].[sales_history_raw]" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
       </DTS:ObjectData>
     </DTS:Executable>
@@ -2774,13 +2784,13 @@
           Id="Package\sales_history_load"
           TopLeft="80,73" />
         <NodeLayout
-          Size="191,42"
-          Id="Package\sales_history_transform"
-          TopLeft="72,253" />
-        <NodeLayout
           Size="182,42"
           Id="Package\sales_history_prepare"
           TopLeft="71,161" />
+        <NodeLayout
+          Size="191,42"
+          Id="Package\sales_history_transform"
+          TopLeft="72,253" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
           TopLeft="162.25,115">
